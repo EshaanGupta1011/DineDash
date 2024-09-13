@@ -1,1 +1,19 @@
-This is a test file
+Packages for frontend:
+
+npm install
+
+
+Packages for backend :
+
+npm install :-
+1. Mongoose: ODM library for MongoDB, enabling schema-based data modeling.
+2. Express: Fast, minimal framework for building Node.js web apps and APIs.
+3. jsonwebtoken: Library for generating and verifying JWTs for secure authentication.
+4. bcrypt: Library for hashing passwords securely using bcrypt algorithm.
+5. cors: Middleware to enable Cross-Origin Resource Sharing (CORS) in Express.
+6. dotenv: Loads environment variables from a `.env` file into `process.env`.
+7. body-parser: Middleware for parsing incoming request bodies in a readable format.
+8. multer: Middleware for handling multipart/form-data, useful for file uploads.
+9. stripe: API for handling payments and transactions via Stripe's payment gateway.
+10. validator: Library for validating and sanitizing strings (e.g., emails, URLs).
+11. nodemon: Tool that automatically restarts the server when code changes during development.
