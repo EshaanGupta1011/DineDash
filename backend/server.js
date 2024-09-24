@@ -15,7 +15,7 @@ const port = process.env.PORT || 4000;
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://eshaangupta1011.github.io/DineDash/",
+    origin: "*",
   })
 );
 
