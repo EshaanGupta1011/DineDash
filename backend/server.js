@@ -13,7 +13,11 @@ const port = 4000;
 
 // middleware
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://eshaangupta1011.github.io/DineDash/",
+  })
+);
 
 // db connection
 connectDB();
