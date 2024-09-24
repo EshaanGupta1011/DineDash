@@ -1,14 +1,11 @@
 {
-  "homepage": "https://eshaanguota1011.github.io/DineDash",
   "name": "dinedash",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "build": "rollup -c",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
