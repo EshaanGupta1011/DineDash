@@ -39,7 +39,11 @@ const Footer = () => {
       </div>
       <hr />
       <p className="footer-copyright">
-        Copyright 2024 @ DineDash, 12123, All rights reserved.
+        This website is developed solely for learning and practice purposes. I
+        have no intention of copying or defaming any existing application. I do
+        not claim any copyright over the content or names used on this website.
+        If any name coincides, it is just a coincidence. I used GreatStack's
+        youtube channel to develop this dummy website
       </p>
     </div>
   );
