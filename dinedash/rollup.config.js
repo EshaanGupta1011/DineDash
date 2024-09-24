@@ -1,21 +1,29 @@
 import babel from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
+import postcss from "rollup-plugin-postcss";
+import url from "@rollup/plugin-url";
 
 export default {
-  input: "src/index.js", // Change this to your actual entry file
+  input: "src/main.jsx", // Set the entry point to main.jsx
   output: {
-    file: "dist/bundle.js", // Change this to your desired output file location
-    format: "cjs", // Could also use 'esm', 'iife', or 'umd' based on needs
-    sourcemap: true, // Optional, useful for debugging
+    file: "dist/bundle.js", // Output file location
+    format: "cjs", // CommonJS format
+    sourcemap: true,
   },
   plugins: [
-    resolve(), // Helps Bundling Node Modules
-    commonjs(), // Converts CommonJS to ESModules
+    resolve(),
+    commonjs(),
     babel({
       babelHelpers: "bundled",
-      exclude: "node_modules/**", // Only transpile our code
-      presets: ["@babel/preset-react"], // React JSX compilation
+      exclude: "node_modules/**",
+      presets: ["@babel/preset-react"], // Handle JSX in your App
+    }),
+    postcss(),
+    url({
+      include: ["**/*.svg", "**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif"],
+      limit: 8192,
+      emitFiles: true,
     }),
   ],
 };
